@@ -1,0 +1,917 @@
+{
+    "_hparam_types": {
+        "act_epsilon": [
+            "<not serializable>",
+            false
+        ],
+        "act_halting_bias_init": [
+            "<not serializable>",
+            false
+        ],
+        "act_loss_weight": [
+            "<not serializable>",
+            false
+        ],
+        "act_max_steps": [
+            "<not serializable>",
+            false
+        ],
+        "act_type": [
+            "<not serializable>",
+            false
+        ],
+        "activation_dtype": [
+            "<not serializable>",
+            false
+        ],
+        "add_ffn_unit_to_the_transition_function": [
+            "<not serializable>",
+            false
+        ],
+        "add_or_concat_timing_signal": [
+            "<not serializable>",
+            false
+        ],
+        "add_position_timing_signal": [
+            "<not serializable>",
+            false
+        ],
+        "add_relative_to_values": [
+            "<not serializable>",
+            false
+        ],
+        "add_sru": [
+            "<not serializable>",
+            false
+        ],
+        "add_step_timing_signal": [
+            "<not serializable>",
+            false
+        ],
+        "area_key_mode": [
+            "<not serializable>",
+            false
+        ],
+        "area_value_mode": [
+            "<not serializable>",
+            false
+        ],
+        "attention_dropout": [
+            "<not serializable>",
+            false
+        ],
+        "attention_dropout_broadcast_dims": [
+            "<not serializable>",
+            false
+        ],
+        "attention_key_channels": [
+            "<not serializable>",
+            false
+        ],
+        "attention_value_channels": [
+            "<not serializable>",
+            false
+        ],
+        "attention_variables_3d": [
+            "<not serializable>",
+            false
+        ],
+        "batch_shuffle_size": [
+            "<not serializable>",
+            false
+        ],
+        "batch_size": [
+            "<not serializable>",
+            false
+        ],
+        "bottom": [
+            "<not serializable>",
+            false
+        ],
+        "causal_decoder_self_attention": [
+            "<not serializable>",
+            false
+        ],
+        "clip_grad_norm": [
+            "<not serializable>",
+            false
+        ],
+        "compress_steps": [
+            "<not serializable>",
+            false
+        ],
+        "conv_first_kernel": [
+            "<not serializable>",
+            false
+        ],
+        "couple_carry_transform_gates": [
+            "<not serializable>",
+            false
+        ],
+        "daisy_chain_variables": [
+            "<not serializable>",
+            false
+        ],
+        "data_dir": [
+            "<not serializable>",
+            false
+        ],
+        "depth_embedding": [
+            "<not serializable>",
+            false
+        ],
+        "dropout": [
+            "<not serializable>",
+            false
+        ],
+        "dwa_elements": [
+            "<not serializable>",
+            false
+        ],
+        "eval_drop_long_sequences": [
+            "<not serializable>",
+            false
+        ],
+        "eval_freq_in_steps": [
+            "<not serializable>",
+            false
+        ],
+        "eval_run_autoregressive": [
+            "<not serializable>",
+            false
+        ],
+        "eval_steps": [
+            "<not serializable>",
+            false
+        ],
+        "eval_timeout_mins": [
+            "<not serializable>",
+            false
+        ],
+        "factored_logits": [
+            "<not serializable>",
+            false
+        ],
+        "ffn_layer": [
+            "<not serializable>",
+            false
+        ],
+        "filter_size": [
+            "<not serializable>",
+            false
+        ],
+        "force_full_predict": [
+            "<not serializable>",
+            false
+        ],
+        "gate_ffn_layer": [
+            "<not serializable>",
+            false
+        ],
+        "grad_noise_scale": [
+            "<not serializable>",
+            false
+        ],
+        "hard_attention_k": [
+            "<not serializable>",
+            false
+        ],
+        "heads_share_relative_embedding": [
+            "<not serializable>",
+            false
+        ],
+        "hidden_size": [
+            "<not serializable>",
+            false
+        ],
+        "initializer": [
+            "<not serializable>",
+            false
+        ],
+        "initializer_gain": [
+            "<not serializable>",
+            false
+        ],
+        "kernel_height": [
+            "<not serializable>",
+            false
+        ],
+        "kernel_width": [
+            "<not serializable>",
+            false
+        ],
+        "label_smoothing": [
+            "<not serializable>",
+            false
+        ],
+        "layer_postprocess_sequence": [
+            "<not serializable>",
+            false
+        ],
+        "layer_prepostprocess_dropout": [
+            "<not serializable>",
+            false
+        ],
+        "layer_prepostprocess_dropout_broadcast_dims": [
+            "<not serializable>",
+            false
+        ],
+        "layer_preprocess_sequence": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_constant": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_cosine_cycle_steps": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_decay_rate": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_decay_scheme": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_decay_staircase": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_decay_steps": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_minimum": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_schedule": [
+            "<not serializable>",
+            false
+        ],
+        "learning_rate_warmup_steps": [
+            "<not serializable>",
+            false
+        ],
+        "length_bucket_step": [
+            "<not serializable>",
+            false
+        ],
+        "loss": [
+            "<not serializable>",
+            false
+        ],
+        "lstm_forget_bias": [
+            "<not serializable>",
+            false
+        ],
+        "max_area_height": [
+            "<not serializable>",
+            false
+        ],
+        "max_area_width": [
+            "<not serializable>",
+            false
+        ],
+        "max_input_seq_length": [
+            "<not serializable>",
+            false
+        ],
+        "max_length": [
+            "<not serializable>",
+            false
+        ],
+        "max_relative_position": [
+            "<not serializable>",
+            false
+        ],
+        "max_target_seq_length": [
+            "<not serializable>",
+            false
+        ],
+        "memory_height": [
+            "<not serializable>",
+            false
+        ],
+        "min_length": [
+            "<not serializable>",
+            false
+        ],
+        "min_length_bucket": [
+            "<not serializable>",
+            false
+        ],
+        "mix_with_transformer": [
+            "<not serializable>",
+            false
+        ],
+        "mixed_precision_optimizer_init_loss_scale": [
+            "<not serializable>",
+            false
+        ],
+        "mixed_precision_optimizer_loss_scaler": [
+            "<not serializable>",
+            false
+        ],
+        "mlperf_mode": [
+            "<not serializable>",
+            false
+        ],
+        "mode": [
+            "<not serializable>",
+            false
+        ],
+        "model_dir": [
+            "<not serializable>",
+            false
+        ],
+        "moe_hidden_sizes": [
+            "<not serializable>",
+            false
+        ],
+        "moe_k": [
+            "<not serializable>",
+            false
+        ],
+        "moe_loss_coef": [
+            "<not serializable>",
+            false
+        ],
+        "moe_num_experts": [
+            "<not serializable>",
+            false
+        ],
+        "moe_overhead_eval": [
+            "<not serializable>",
+            false
+        ],
+        "moe_overhead_train": [
+            "<not serializable>",
+            false
+        ],
+        "multiply_embedding_mode": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_fixed_train_length": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_label_weight": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_max_input_length": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_max_target_length": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_mixing_schedule": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_per_task_threshold": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_reweight_label_loss": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_schedule_max_examples": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_schedule_threshold": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_target_eval_only": [
+            "<not serializable>",
+            false
+        ],
+        "multiproblem_vocab_size": [
+            "<not serializable>",
+            false
+        ],
+        "name": [
+            "<not serializable>",
+            false
+        ],
+        "nbr_decoder_problems": [
+            "<not serializable>",
+            false
+        ],
+        "no_data_parallelism": [
+            "<not serializable>",
+            false
+        ],
+        "norm_epsilon": [
+            "<not serializable>",
+            false
+        ],
+        "norm_type": [
+            "<not serializable>",
+            false
+        ],
+        "num_area_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_decoder_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_encoder_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_heads": [
+            "<not serializable>",
+            false
+        ],
+        "num_hidden_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_inrecurrence_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_mixedin_layers": [
+            "<not serializable>",
+            false
+        ],
+        "num_rec_steps": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_beta1": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_beta2": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_clipping_threshold": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_decay_type": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_factored": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_memory_exponent": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adafactor_multiply_by_parameter_scale": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adam_beta1": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adam_beta2": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_adam_epsilon": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_momentum_momentum": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_momentum_nesterov": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_multistep_accumulate_steps": [
+            "<not serializable>",
+            false
+        ],
+        "optimizer_zero_grads": [
+            "<not serializable>",
+            false
+        ],
+        "overload_eval_metric_name": [
+            "<not serializable>",
+            false
+        ],
+        "pack_dataset": [
+            "<not serializable>",
+            false
+        ],
+        "pad_batch": [
+            "<not serializable>",
+            false
+        ],
+        "parameter_attention_key_channels": [
+            "<not serializable>",
+            false
+        ],
+        "parameter_attention_value_channels": [
+            "<not serializable>",
+            false
+        ],
+        "pos": [
+            "<not serializable>",
+            false
+        ],
+        "position_start_index": [
+            "<not serializable>",
+            false
+        ],
+        "prepend_mode": [
+            "<not serializable>",
+            false
+        ],
+        "pretrained_model_dir": [
+            "<not serializable>",
+            false
+        ],
+        "proximity_bias": [
+            "<not serializable>",
+            false
+        ],
+        "recurrence_type": [
+            "<not serializable>",
+            false
+        ],
+        "relu_dropout": [
+            "<not serializable>",
+            false
+        ],
+        "relu_dropout_broadcast_dims": [
+            "<not serializable>",
+            false
+        ],
+        "sampling_keep_top_k": [
+            "<not serializable>",
+            false
+        ],
+        "sampling_method": [
+            "<not serializable>",
+            false
+        ],
+        "sampling_temp": [
+            "<not serializable>",
+            false
+        ],
+        "schedule": [
+            "<not serializable>",
+            false
+        ],
+        "scheduled_sampling_gold_mixin_prob": [
+            "<not serializable>",
+            false
+        ],
+        "scheduled_sampling_prob": [
+            "<not serializable>",
+            false
+        ],
+        "scheduled_sampling_warmup_steps": [
+            "<not serializable>",
+            false
+        ],
+        "self_attention_type": [
+            "<not serializable>",
+            false
+        ],
+        "shared_embedding": [
+            "<not serializable>",
+            false
+        ],
+        "shared_embedding_and_softmax_weights": [
+            "<not serializable>",
+            false
+        ],
+        "split_targets_chunk_length": [
+            "<not serializable>",
+            false
+        ],
+        "split_targets_max_chunks": [
+            "<not serializable>",
+            false
+        ],
+        "split_targets_strided_training": [
+            "<not serializable>",
+            false
+        ],
+        "split_to_length": [
+            "<not serializable>",
+            false
+        ],
+        "std_server_protocol": [
+            "<not serializable>",
+            false
+        ],
+        "step_timing_signal_type": [
+            "<not serializable>",
+            false
+        ],
+        "summarize_grads": [
+            "<not serializable>",
+            false
+        ],
+        "summarize_vars": [
+            "<not serializable>",
+            false
+        ],
+        "symbol_dropout": [
+            "<not serializable>",
+            false
+        ],
+        "symbol_modality_num_shards": [
+            "<not serializable>",
+            false
+        ],
+        "top": [
+            "<not serializable>",
+            false
+        ],
+        "tpu_enable_host_call": [
+            "<not serializable>",
+            false
+        ],
+        "train_steps": [
+            "<not serializable>",
+            false
+        ],
+        "transform_bias_init": [
+            "<not serializable>",
+            false
+        ],
+        "transformer_ffn_type": [
+            "<not serializable>",
+            false
+        ],
+        "unidirectional_encoder": [
+            "<not serializable>",
+            false
+        ],
+        "use_custom_ops": [
+            "<not serializable>",
+            false
+        ],
+        "use_fixed_batch_size": [
+            "<not serializable>",
+            false
+        ],
+        "use_memory_as_final_state": [
+            "<not serializable>",
+            false
+        ],
+        "use_pad_remover": [
+            "<not serializable>",
+            false
+        ],
+        "use_target_space_embedding": [
+            "<not serializable>",
+            false
+        ],
+        "video_num_input_frames": [
+            "<not serializable>",
+            false
+        ],
+        "video_num_target_frames": [
+            "<not serializable>",
+            false
+        ],
+        "vocab_divisor": [
+            "<not serializable>",
+            false
+        ],
+        "warm_start_from": [
+            "<not serializable>",
+            false
+        ],
+        "warm_start_from_second": [
+            "<not serializable>",
+            false
+        ],
+        "weight_decay": [
+            "<not serializable>",
+            false
+        ],
+        "weight_dtype": [
+            "<not serializable>",
+            false
+        ],
+        "weight_noise": [
+            "<not serializable>",
+            false
+        ],
+        "weights_fn": [
+            "<not serializable>",
+            false
+        ]
+    },
+    "_model_structure": null,
+    "act_epsilon": 0.01,
+    "act_halting_bias_init": 1.0,
+    "act_loss_weight": 0.01,
+    "act_max_steps": 4,
+    "act_type": "basic",
+    "activation_dtype": "float32",
+    "add_ffn_unit_to_the_transition_function": false,
+    "add_or_concat_timing_signal": "add",
+    "add_position_timing_signal": true,
+    "add_relative_to_values": false,
+    "add_sru": false,
+    "add_step_timing_signal": true,
+    "area_key_mode": "none",
+    "area_value_mode": "none",
+    "attention_dropout": 0.1,
+    "attention_dropout_broadcast_dims": "",
+    "attention_key_channels": 0,
+    "attention_value_channels": 0,
+    "attention_variables_3d": false,
+    "batch_shuffle_size": 512,
+    "batch_size": 4096,
+    "bottom": {},
+    "causal_decoder_self_attention": true,
+    "clip_grad_norm": 0.0,
+    "compress_steps": 0,
+    "conv_first_kernel": 3,
+    "couple_carry_transform_gates": true,
+    "daisy_chain_variables": false,
+    "data_dir": "/home/phillip/t2t/data/translate_ende_wmt32k",
+    "depth_embedding": true,
+    "dropout": 0.2,
+    "dwa_elements": true,
+    "eval_drop_long_sequences": false,
+    "eval_freq_in_steps": 2000,
+    "eval_run_autoregressive": false,
+    "eval_steps": 100,
+    "eval_timeout_mins": 240,
+    "factored_logits": false,
+    "ffn_layer": "dense_relu_dense",
+    "filter_size": 512,
+    "force_full_predict": false,
+    "gate_ffn_layer": "dense",
+    "grad_noise_scale": 0.0,
+    "hard_attention_k": 0,
+    "heads_share_relative_embedding": false,
+    "hidden_size": 128,
+    "initializer": "uniform_unit_scaling",
+    "initializer_gain": 1.0,
+    "kernel_height": 3,
+    "kernel_width": 1,
+    "label_smoothing": 0.1,
+    "layer_postprocess_sequence": "da",
+    "layer_prepostprocess_dropout": 0.1,
+    "layer_prepostprocess_dropout_broadcast_dims": "",
+    "layer_preprocess_sequence": "n",
+    "learning_rate": 0.2,
+    "learning_rate_constant": 2.0,
+    "learning_rate_cosine_cycle_steps": 250000,
+    "learning_rate_decay_rate": 1.0,
+    "learning_rate_decay_scheme": "noam",
+    "learning_rate_decay_staircase": false,
+    "learning_rate_decay_steps": 5000,
+    "learning_rate_minimum": null,
+    "learning_rate_schedule": "constant*linear_warmup*rsqrt_decay*rsqrt_hidden_size",
+    "learning_rate_warmup_steps": 8000,
+    "length_bucket_step": 1.1,
+    "loss": {},
+    "lstm_forget_bias": 1.0,
+    "max_area_height": 1,
+    "max_area_width": 1,
+    "max_input_seq_length": 0,
+    "max_length": 256,
+    "max_relative_position": 0,
+    "max_target_seq_length": 0,
+    "memory_height": 1,
+    "min_length": 0,
+    "min_length_bucket": 8,
+    "mix_with_transformer": null,
+    "mixed_precision_optimizer_init_loss_scale": 32768,
+    "mixed_precision_optimizer_loss_scaler": "exponential",
+    "mlperf_mode": false,
+    "mode": "train",
+    "model_dir": "/home/phillip/t2t/train/UT_invertible",
+    "moe_hidden_sizes": "2048",
+    "moe_k": 2,
+    "moe_loss_coef": 0.001,
+    "moe_num_experts": 16,
+    "moe_overhead_eval": 2.0,
+    "moe_overhead_train": 1.0,
+    "multiply_embedding_mode": "sqrt_depth",
+    "multiproblem_fixed_train_length": -1,
+    "multiproblem_label_weight": 0.5,
+    "multiproblem_max_input_length": -1,
+    "multiproblem_max_target_length": -1,
+    "multiproblem_mixing_schedule": "constant",
+    "multiproblem_per_task_threshold": "",
+    "multiproblem_reweight_label_loss": false,
+    "multiproblem_schedule_max_examples": 10000000.0,
+    "multiproblem_schedule_threshold": 0.5,
+    "multiproblem_target_eval_only": false,
+    "multiproblem_vocab_size": -1,
+    "name": {},
+    "nbr_decoder_problems": 1,
+    "no_data_parallelism": false,
+    "norm_epsilon": 1e-06,
+    "norm_type": "layer",
+    "num_area_layers": 0,
+    "num_decoder_layers": 0,
+    "num_encoder_layers": 0,
+    "num_heads": 4,
+    "num_hidden_layers": 2,
+    "num_inrecurrence_layers": 1,
+    "num_mixedin_layers": 2,
+    "num_rec_steps": 8,
+    "optimizer": "adam",
+    "optimizer_adafactor_beta1": 0.0,
+    "optimizer_adafactor_beta2": 0.999,
+    "optimizer_adafactor_clipping_threshold": 1.0,
+    "optimizer_adafactor_decay_type": "pow",
+    "optimizer_adafactor_factored": true,
+    "optimizer_adafactor_memory_exponent": 0.8,
+    "optimizer_adafactor_multiply_by_parameter_scale": true,
+    "optimizer_adam_beta1": 0.9,
+    "optimizer_adam_beta2": 0.997,
+    "optimizer_adam_epsilon": 1e-09,
+    "optimizer_momentum_momentum": 0.9,
+    "optimizer_momentum_nesterov": false,
+    "optimizer_multistep_accumulate_steps": 0,
+    "optimizer_zero_grads": false,
+    "overload_eval_metric_name": "",
+    "pack_dataset": false,
+    "pad_batch": false,
+    "parameter_attention_key_channels": 0,
+    "parameter_attention_value_channels": 0,
+    "pos": null,
+    "position_start_index": null,
+    "prepend_mode": "none",
+    "pretrained_model_dir": "",
+    "problem": "<not serializable>",
+    "problem_hparams": "<not serializable>",
+    "proximity_bias": false,
+    "recurrence_type": "basic",
+    "relu_dropout": 0.1,
+    "relu_dropout_broadcast_dims": "",
+    "sampling_keep_top_k": -1,
+    "sampling_method": "argmax",
+    "sampling_temp": 1.0,
+    "schedule": "train_and_evaluate",
+    "scheduled_sampling_gold_mixin_prob": 0.5,
+    "scheduled_sampling_prob": 0.0,
+    "scheduled_sampling_warmup_steps": 50000,
+    "self_attention_type": "dot_product",
+    "shared_embedding": false,
+    "shared_embedding_and_softmax_weights": true,
+    "split_targets_chunk_length": 0,
+    "split_targets_max_chunks": 100,
+    "split_targets_strided_training": false,
+    "split_to_length": 0,
+    "std_server_protocol": null,
+    "step_timing_signal_type": "learned",
+    "summarize_grads": false,
+    "summarize_vars": false,
+    "symbol_dropout": 0.0,
+    "symbol_modality_num_shards": 16,
+    "top": {},
+    "tpu_enable_host_call": false,
+    "train_steps": 1000000,
+    "transform_bias_init": -1.0,
+    "transformer_ffn_type": "fc",
+    "unidirectional_encoder": false,
+    "use_custom_ops": true,
+    "use_fixed_batch_size": false,
+    "use_memory_as_final_state": false,
+    "use_pad_remover": true,
+    "use_target_space_embedding": true,
+    "video_num_input_frames": 1,
+    "video_num_target_frames": 1,
+    "vocab_divisor": 1,
+    "warm_start_from": null,
+    "warm_start_from_second": "",
+    "weight_decay": 0.0,
+    "weight_dtype": "float32",
+    "weight_noise": 0.0,
+    "weights_fn": {}
+}
