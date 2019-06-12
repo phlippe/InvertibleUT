@@ -22,6 +22,7 @@ from tensor2tensor.layers import common_layers
 from tensor2tensor.models import transformer
 from tensor2tensor.utils import expert_utils
 
+SINGLE_LAYER = False
 
 @registry.register_model
 class InvertibleUT(universal_transformer.UniversalTransformer):
@@ -78,6 +79,9 @@ class InvertibleUT(universal_transformer.UniversalTransformer):
             hparams,
             nonpadding=transformer.features_to_nonpadding(features, "inputs"),
             save_weights_to=self.attention_weights))
+
+    for var in tf.trainable_variables():
+      print(var)
 
     return encoder_output, encoder_decoder_attention_bias, encoder_extra_output
 
@@ -207,23 +211,21 @@ def invertible_UT_encoder(encoder_input,
     sub_hparams.hidden_size /= 2
 
     for i in range(2):
-      with tf.variable_scope("part_%i" % i):
+      ffn_unit.append(functools.partial(
+          invertible_transformer_encoder_ffn_unit,
+          hparams=sub_hparams,
+          nonpadding_mask=nonpadding,
+          pad_remover=pad_remover,
+          split_index=i))
 
-        ffn_unit.append(functools.partial(
-            invertible_transformer_encoder_ffn_unit,
-            hparams=sub_hparams,
-            nonpadding_mask=nonpadding,
-            pad_remover=pad_remover,
-            split_index=i))
-
-        attention_unit.append(functools.partial(
-            invertible_transformer_encoder_attention_unit,
-            hparams=sub_hparams,
-            encoder_self_attention_bias=encoder_self_attention_bias,
-            attention_dropout_broadcast_dims=attention_dropout_broadcast_dims,
-            save_weights_to=save_weights_to,
-            make_image_summary=make_image_summary,
-            split_index=i))
+      attention_unit.append(functools.partial(
+          invertible_transformer_encoder_attention_unit,
+          hparams=sub_hparams,
+          encoder_self_attention_bias=encoder_self_attention_bias,
+          attention_dropout_broadcast_dims=attention_dropout_broadcast_dims,
+          save_weights_to=save_weights_to,
+          make_image_summary=make_image_summary,
+          split_index=i))
 
     x, extra_output = invertible_UT_layer(
         x, hparams, ffn_unit, attention_unit, pad_remover=pad_remover)
@@ -287,23 +289,22 @@ def invertible_UT_decoder(decoder_input,
     sub_hparams.hidden_size /= 2
 
     for i in range(2):
-      with tf.variable_scope("part_%i" % i):
-        ffn_unit.append(functools.partial(
-            invertible_transformer_decoder_ffn_unit,
-            hparams=sub_hparams,
-            nonpadding_mask=nonpadding,
-            split_index=i))
+      ffn_unit.append(functools.partial(
+          invertible_transformer_decoder_ffn_unit,
+          hparams=sub_hparams,
+          nonpadding_mask=nonpadding,
+          split_index=i))
 
-        attention_unit.append(functools.partial(
-            invertible_transformer_decoder_attention_unit,
-            hparams=sub_hparams,
-            encoder_output=encoder_output,
-            decoder_self_attention_bias=decoder_self_attention_bias,
-            encoder_decoder_attention_bias=encoder_decoder_attention_bias,
-            attention_dropout_broadcast_dims=attention_dropout_broadcast_dims,
-            save_weights_to=save_weights_to,
-            make_image_summary=make_image_summary,
-            split_index=i))
+      attention_unit.append(functools.partial(
+          invertible_transformer_decoder_attention_unit,
+          hparams=sub_hparams,
+          encoder_output=encoder_output,
+          decoder_self_attention_bias=decoder_self_attention_bias,
+          encoder_decoder_attention_bias=encoder_decoder_attention_bias,
+          attention_dropout_broadcast_dims=attention_dropout_broadcast_dims,
+          save_weights_to=save_weights_to,
+          make_image_summary=make_image_summary,
+          split_index=i))
 
     x, extra_output = invertible_UT_layer(
         x, hparams, ffn_unit, attention_unit)
@@ -779,8 +780,12 @@ def invertible_universal_transformer_basic(layer_inputs,
   for i in range(hparams.num_inrecurrence_layers):
     with tf.variable_scope("rec_layer_%d" % i):
       if isinstance(ffn_unit, list) and isinstance(attention_unit, list):
-        for sub_ffn_unit, sub_attention_unit in zip(ffn_unit, attention_unit):
-          new_state = sub_ffn_unit(sub_attention_unit(new_state))
+        for index, sub_ffn_unit, sub_attention_unit in zip(range(len(ffn_unit)), ffn_unit, attention_unit):
+          if hparams.invertible_share_layer_weights:
+            new_state = sub_ffn_unit(sub_attention_unit(new_state))
+          else:
+            with tf.variable_scope("sublayer_%d" % index):
+              new_state = sub_ffn_unit(sub_attention_unit(new_state))
       else:
         new_state = ffn_unit(attention_unit(new_state))
 

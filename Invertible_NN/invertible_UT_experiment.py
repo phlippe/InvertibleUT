@@ -29,7 +29,7 @@ Modes = tf.estimator.ModeKeys
 # Setup some directories
 data_dir = os.path.expanduser("~/t2t/data/translate_ende_wmt32k")
 tmp_dir = os.path.expanduser("~/t2t/tmp")
-train_dir = os.path.expanduser("~/t2t/train/UT_invertible")
+train_dir = os.path.expanduser("~/t2t/train/UT_invertible_test")
 checkpoint_dir = os.path.expanduser("~/t2t/checkpoints")
 tf.gfile.MakeDirs(data_dir)
 tf.gfile.MakeDirs(tmp_dir)
@@ -70,6 +70,11 @@ model_name = "invertible_ut"
 hparams_set = "universal_transformer_tiny"
 
 hparams = trainer_lib.create_hparams(hparams_set)
+############
+## CHANGE ##
+############
+# Adding parameter for determining whether the weights should be shared among the two layers for invertibility or not
+hparams.add_hparam("invertible_share_layer_weights", False)
 
 
 FLAGS.problems = problem_name
